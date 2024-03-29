@@ -43,6 +43,10 @@ public class CustomerManager {
         return query.getResultList();
     }
 
+    public Customer findById(int idCustomer) {
+        return em.find(Customer.class, idCustomer);
+    }
+
     /**
      * Pour modifier un Customer dans la base de données
      *
